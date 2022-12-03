@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls"
+                sh "rm -rf ticket-system"
                 sh "git clone https://github.com/Frowsty/ticket-system"
                 //checkout([$class: 'GitSCM',branches: [[name: '*/main']],userRemoteConfigs: [[url: 'https://github.com/Frowsty/ticket-system']]])
                 sh "pwd"
