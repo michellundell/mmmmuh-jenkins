@@ -25,5 +25,12 @@ pipeline {
                 sh "cd FlightTicket; make"
             }
         }
+        stage('test') {
+            steps {
+                sh "pwd"
+                sh "ls"
+                sh "cd FlightTicket; make run"
+            }
+        }
     }
 }
