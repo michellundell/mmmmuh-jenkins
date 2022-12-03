@@ -8,22 +8,21 @@ pipeline {
                 sh "pwd"
             }
         }
-
-        stage('checkout Wayazaexa/CplusplusAssignment') {
+        stage('checkout') {
             steps {
                 sh "pwd"
                 sh "ls"
-                sh "rm -rf CplusplusAssignment"
-                sh "git clone https://github.com/Wayazaexa/CplusplusAssignment"
+                sh "rm -rf FlightTicket"
+                sh "git clone https://github.com/TobiasHoglin/FlightTicket"
                 sh "pwd"
                 sh "ls"
             }
         }
-        stage('compile Wayazaexa/CplusplusAssignment') {
+        stage('compile') {
             steps {
                 sh "pwd"
                 sh "ls"
-                sh "cd CplusplusAssignment; make"
+                sh "cd FlightTicket; make"
             }
         }
     }
