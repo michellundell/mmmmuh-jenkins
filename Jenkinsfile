@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Start') {
             steps {
-                echo 'Starting job"
+                echo 'Starting job'
             }
         }
         stage('checkout Frowsty/ticket-system') {
