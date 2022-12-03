@@ -2,15 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Start') {
             steps {
-                echo 'Hello World'; sleep 1; echo "Tjoohoo"
-                echo 'baha'; sleep 1; echo "Tjoho"
+                echo 'Starting job"
             }
         }
-        stage('checkout Frowsty') {
+        stage('checkout Frowsty/ticket-system') {
             steps {
                 checkout([$class: 'GitSCM',branches: [[name: '*/main']],userRemoteConfigs: [[url: 'https://github.com/Frowsty/ticket-system']]])
+            }
+        }
+        stage('compile Frowsty/ticket-system') {
+            steps {
                 sh "pwd; ls; cd ticket-system; make"
             }
         }
