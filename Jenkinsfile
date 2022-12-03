@@ -8,22 +8,22 @@ pipeline {
                 sh "pwd"
             }
         }
-        stage('checkout Frowsty/ticket-system') {
+
+        stage('checkout Wayazaexa/CplusplusAssignment') {
             steps {
                 sh "pwd"
                 sh "ls"
-                sh "rm -rf ticket-system"
-                sh "git clone https://github.com/Frowsty/ticket-system"
-                //checkout([$class: 'GitSCM',branches: [[name: '*/main']],userRemoteConfigs: [[url: 'https://github.com/Frowsty/ticket-system']]])
+                sh "rm -rf CplusplusAssignment"
+                sh "git clone https://github.com/Wayazaexa/CplusplusAssignment"
                 sh "pwd"
                 sh "ls"
             }
         }
-        stage('compile Frowsty/ticket-system') {
+        stage('compile Wayazaexa/CplusplusAssignment') {
             steps {
                 sh "pwd"
                 sh "ls"
-                sh "cd ticket-system; make"
+                sh "cd CplusplusAssignment; make"
             }
         }
     }
